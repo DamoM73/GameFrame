@@ -89,7 +89,7 @@ class Level:
                 if axes > 0:
                     self.has_hat_2 = True
                 for i in range(axes):
-                    self.p1_btns.append(self.joysticks[1].get_axis(i))
+                    self.p2_btns.append(self.joysticks[1].get_axis(i))
 
     def run(self) -> bool:
         """
@@ -150,8 +150,8 @@ class Level:
                         signals = True
             if self.has_hat_2:
                 for i in range(self.joysticks[1].get_numaxes()):
-                    self.p1_btns[-i] = self.joysticks[1].get_axis(i)
-                    if self.p2_btns[-i] > 0 or self.p2_btns[-i] < 0:
+                    self.p2_btns[-(i+1)] = self.joysticks[1].get_axis(i)
+                    if self.p2_btns[-(i+1)] > 0 or self.p2_btns[-(i+1)] < 0:
                         signals = True
 
             if signals:
