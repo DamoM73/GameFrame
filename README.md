@@ -1,6 +1,6 @@
 ## Introduction
 
-This is an empty instance of GameFrame, ready to start our project.
+This is a clean instance of GameFrame, ready to start our project.
 
 GameFrame has been developed to take the excellent PyGame libraries and make them more accessible and easy to use for beginner to intermediate programmers. GameFrame aims to help with learning the concepts of text based game programming without getting caught up in the implementation details.
 
