@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -843,7 +843,7 @@ with customizable font, size, color, and style.</p>
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TextObject</span><span class="p">(</span><span class="n">RoomObject</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    A drawable text object for displaying text in a game level.</span>
 
 <span class="sd">    Inherits from RoomObject and provides functionality for rendering and updating text</span>
@@ -851,30 +851,30 @@ with customizable font, size, color, and style.</p>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        rendered_text: The rendered pygame Surface of the text.</span>
-<span class="sd">        rect (pygame.Rect): The rectangle representing the text&#39;s position and size.</span>
+<span class="sd">        rect (pygame.Rect): The rectangle representing the text's position and size.</span>
 <span class="sd">        built_font: The pygame Font object used for rendering.</span>
 <span class="sd">        text (str): The text string to display.</span>
 <span class="sd">        size (int): Font size.</span>
 <span class="sd">        font (str): Font name.</span>
 <span class="sd">        colour (tuple): RGB color of the text.</span>
 <span class="sd">        bold (bool): Whether the font is bold.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">:</span> <span class="n">Level</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Not Set&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
-                 <span class="n">font</span><span class="o">=</span><span class="s1">&#39;Comic Sans MS&#39;</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">bold</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">:</span> <span class="n">Level</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">'Not Set'</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+                 <span class="n">font</span><span class="o">=</span><span class="s1">'Comic Sans MS'</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">bold</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Initializes a TextObject with the given properties.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            room (Level): The game level or room where the object is placed.</span>
 <span class="sd">            x (int): The x-coordinate of the object.</span>
 <span class="sd">            y (int): The y-coordinate of the object.</span>
-<span class="sd">            text (str, optional): The text to display. Defaults to &#39;Not Set&#39;.</span>
+<span class="sd">            text (str, optional): The text to display. Defaults to 'Not Set'.</span>
 <span class="sd">            size (int, optional): Font size. Defaults to 60.</span>
-<span class="sd">            font (str, optional): Font name. Defaults to &#39;Comic Sans MS&#39;.</span>
+<span class="sd">            font (str, optional): Font name. Defaults to 'Comic Sans MS'.</span>
 <span class="sd">            colour (tuple, optional): RGB color of the text. Defaults to (0, 0, 0).</span>
 <span class="sd">            bold (bool, optional): Whether the font is bold. Defaults to False.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="n">RoomObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">rendered_text</span> <span class="o">=</span> <span class="mi">0</span>
@@ -888,9 +888,9 @@ with customizable font, size, color, and style.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">update_text</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">update_text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Updates the rendered text surface and its rectangle based on current properties.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">built_font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bold</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rendered_text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">built_font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colour</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rendered_text</span>
@@ -916,7 +916,7 @@ with customizable font, size, color, and style.</p>
 
 
 <h3 id="GameFrame.TextObject.TextObject.__init__" class="doc doc-heading">
-            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">room</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Not Set&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="s1">&#39;Comic Sans MS&#39;</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">bold</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">room</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">'Not Set'</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="s1">'Comic Sans MS'</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">bold</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 </h3>
 
@@ -1096,21 +1096,21 @@ with customizable font, size, color, and style.</p>
 <span class="normal">45</span>
 <span class="normal">46</span>
 <span class="normal">47</span>
-<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">:</span> <span class="n">Level</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Not Set&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
-             <span class="n">font</span><span class="o">=</span><span class="s1">&#39;Comic Sans MS&#39;</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">bold</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">:</span> <span class="n">Level</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">'Not Set'</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+             <span class="n">font</span><span class="o">=</span><span class="s1">'Comic Sans MS'</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">bold</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Initializes a TextObject with the given properties.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        room (Level): The game level or room where the object is placed.</span>
 <span class="sd">        x (int): The x-coordinate of the object.</span>
 <span class="sd">        y (int): The y-coordinate of the object.</span>
-<span class="sd">        text (str, optional): The text to display. Defaults to &#39;Not Set&#39;.</span>
+<span class="sd">        text (str, optional): The text to display. Defaults to 'Not Set'.</span>
 <span class="sd">        size (int, optional): Font size. Defaults to 60.</span>
-<span class="sd">        font (str, optional): Font name. Defaults to &#39;Comic Sans MS&#39;.</span>
+<span class="sd">        font (str, optional): Font name. Defaults to 'Comic Sans MS'.</span>
 <span class="sd">        colour (tuple, optional): RGB color of the text. Defaults to (0, 0, 0).</span>
 <span class="sd">        bold (bool, optional): Whether the font is bold. Defaults to False.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">RoomObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
     <span class="bp">self</span><span class="o">.</span><span class="n">rendered_text</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1153,9 +1153,9 @@ with customizable font, size, color, and style.</p>
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">update_text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Updates the rendered text surface and its rectangle based on current properties.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">built_font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bold</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">rendered_text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">built_font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colour</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rendered_text</span>
@@ -1235,7 +1235,7 @@ with customizable font, size, color, and style.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

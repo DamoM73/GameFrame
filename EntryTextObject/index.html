@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -971,7 +971,7 @@ and focus management. Used for capturing player names or other short text entrie
 <span class="normal">180</span>
 <span class="normal">181</span>
 <span class="normal">182</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EntryTextObject</span><span class="p">(</span><span class="n">TextObject</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    A text input object for handling user entry in a game level.</span>
 
 <span class="sd">    Inherits from TextObject and allows for keyboard input, text editing,</span>
@@ -982,10 +982,10 @@ and focus management. Used for capturing player names or other short text entrie
 <span class="sd">        handle_key_events (bool): Whether the object should handle key events.</span>
 <span class="sd">        accepting_input (bool): Whether the object is currently accepting input.</span>
 <span class="sd">        active (bool): Whether the object is currently focused and active.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">:</span> <span class="n">Level</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">max_len</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Initializes the EntryTextObject.</span>
 
 <span class="sd">        Args:</span>
@@ -993,148 +993,148 @@ and focus management. Used for capturing player names or other short text entrie
 <span class="sd">            x (int): The x-coordinate of the object.</span>
 <span class="sd">            y (int): The y-coordinate of the object.</span>
 <span class="sd">            max_len (int, optional): Maximum length of input text. Defaults to 4.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">TextObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="sd">        """</span>
+        <span class="n">TextObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_len</span> <span class="o">=</span> <span class="n">max_len</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">handle_key_events</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">accepting_input</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">accept_input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Enables the object to accept input.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">accepting_input</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">set_focus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_focus</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Sets the focus state of the object.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            in_focus (bool): True if the object should be active, False otherwise.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="n">in_focus</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">key_pressed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Handles key press events for text entry.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            key: The pygame key state array.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">accepting_input</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">active</span><span class="p">:</span>
 
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">False</span>
             <span class="k">if</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_a</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;A&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'A'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_b</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;B&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'B'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_c</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;C&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'C'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_d</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;D&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'D'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_e</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;E&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'E'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_f</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;F&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'F'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_g</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;G&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'G'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_h</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;H&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'H'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_i</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;I&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'I'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_j</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;J&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'J'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_k</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;K&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'K'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_l</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;L&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'L'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_m</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;M&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'M'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_n</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;N&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'N'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_o</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;O&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'O'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_p</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;P&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'P'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_q</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;Q&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'Q'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_r</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;R&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'R'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_s</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;S&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'S'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_t</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;T&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'T'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_u</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;U&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'U'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_v</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;V&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'V'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_w</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;W&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'W'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_x</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;X&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'X'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_y</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;Y&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'Y'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_z</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;Z&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'Z'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_SPACE</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">' '</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_1</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;1&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'1'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_2</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;2&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'2'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_3</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;3&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'3'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_4</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;4&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'4'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_5</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;5&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'5'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_6</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;6&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'6'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_7</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;7&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'7'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_8</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;8&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'8'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_9</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;9&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'9'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_0</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;0&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'0'</span>
                 <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_BACKSPACE</span><span class="p">]:</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -1274,7 +1274,7 @@ and focus management. Used for capturing player names or other short text entrie
 <span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">:</span> <span class="n">Level</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">max_len</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Initializes the EntryTextObject.</span>
 
 <span class="sd">    Args:</span>
@@ -1282,8 +1282,8 @@ and focus management. Used for capturing player names or other short text entrie
 <span class="sd">        x (int): The x-coordinate of the object.</span>
 <span class="sd">        y (int): The y-coordinate of the object.</span>
 <span class="sd">        max_len (int, optional): Maximum length of input text. Defaults to 4.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">TextObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="sd">    """</span>
+    <span class="n">TextObject</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">max_len</span> <span class="o">=</span> <span class="n">max_len</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">handle_key_events</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">accepting_input</span> <span class="o">=</span> <span class="kc">True</span>
@@ -1315,9 +1315,9 @@ and focus management. Used for capturing player names or other short text entrie
 <span class="normal">37</span>
 <span class="normal">38</span>
 <span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">accept_input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Enables the object to accept input.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">accepting_input</span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -1504,125 +1504,125 @@ and focus management. Used for capturing player names or other short text entrie
 <span class="normal">180</span>
 <span class="normal">181</span>
 <span class="normal">182</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">key_pressed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Handles key press events for text entry.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        key: The pygame key state array.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">accepting_input</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">active</span><span class="p">:</span>
 
         <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">if</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_a</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;A&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'A'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_b</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;B&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'B'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_c</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;C&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'C'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_d</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;D&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'D'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_e</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;E&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'E'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_f</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;F&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'F'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_g</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;G&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'G'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_h</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;H&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'H'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_i</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;I&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'I'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_j</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;J&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'J'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_k</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;K&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'K'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_l</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;L&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'L'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_m</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;M&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'M'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_n</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;N&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'N'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_o</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;O&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'O'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_p</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;P&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'P'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_q</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;Q&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'Q'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_r</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;R&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'R'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_s</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;S&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'S'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_t</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;T&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'T'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_u</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;U&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'U'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_v</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;V&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'V'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_w</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;W&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'W'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_x</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;X&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'X'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_y</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;Y&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'Y'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_z</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;Z&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'Z'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_SPACE</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">' '</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_1</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;1&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'1'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_2</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;2&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'2'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_3</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;3&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'3'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_4</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;4&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'4'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_5</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;5&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'5'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_6</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;6&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'6'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_7</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;7&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'7'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_8</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;8&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'8'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_9</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;9&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'9'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_0</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;0&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">+=</span> <span class="s1">'0'</span>
             <span class="n">key_recognised</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">elif</span> <span class="n">key</span><span class="p">[</span><span class="n">pygame</span><span class="o">.</span><span class="n">K_BACKSPACE</span><span class="p">]:</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -1697,12 +1697,12 @@ and focus management. Used for capturing player names or other short text entrie
 <span class="normal">46</span>
 <span class="normal">47</span>
 <span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">set_focus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_focus</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Sets the focus state of the object.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_focus (bool): True if the object should be active, False otherwise.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="n">in_focus</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -1778,7 +1778,7 @@ and focus management. Used for capturing player names or other short text entrie
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
